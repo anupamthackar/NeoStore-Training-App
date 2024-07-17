@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97732C4791B1003C0E29 /* AppDelegate.swift */; };
 		920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97752C4791B1003C0E29 /* SceneDelegate.swift */; };
-		920D97782C4791B1003C0E29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97772C4791B1003C0E29 /* ViewController.swift */; };
 		920D977B2C4791B1003C0E29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920D97792C4791B1003C0E29 /* Main.storyboard */; };
 		920D977E2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 920D977C2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld */; };
 		920D97802C4791B4003C0E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920D977F2C4791B4003C0E29 /* Assets.xcassets */; };
 		920D97832C4791B4003C0E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920D97812C4791B4003C0E29 /* LaunchScreen.storyboard */; };
+		920D978C2C47920F003C0E29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 920D978B2C47920F003C0E29 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		920D97702C4791B1003C0E29 /* NeoStore Training App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NeoStore Training App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		920D97732C4791B1003C0E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		920D97752C4791B1003C0E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		920D97772C4791B1003C0E29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		920D977A2C4791B1003C0E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		920D977D2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NeoStore_Training_App.xcdatamodel; sourceTree = "<group>"; };
 		920D977F2C4791B4003C0E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920D978C2C47920F003C0E29 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +58,71 @@
 		920D97722C4791B1003C0E29 /* NeoStore Training App */ = {
 			isa = PBXGroup;
 			children = (
-				920D97732C4791B1003C0E29 /* AppDelegate.swift */,
-				920D97752C4791B1003C0E29 /* SceneDelegate.swift */,
-				920D97772C4791B1003C0E29 /* ViewController.swift */,
-				920D97792C4791B1003C0E29 /* Main.storyboard */,
-				920D977F2C4791B4003C0E29 /* Assets.xcassets */,
-				920D97812C4791B4003C0E29 /* LaunchScreen.storyboard */,
+				920D97932C479328003C0E29 /* Application */,
+				920D97922C479324003C0E29 /* Constant */,
+				920D97912C47931C003C0E29 /* Extension */,
+				920D97902C479319003C0E29 /* Helper */,
+				920D978F2C479316003C0E29 /* Screens */,
+				920D978E2C479313003C0E29 /* Storyboard */,
+				920D978D2C479311003C0E29 /* Resources */,
 				920D97842C4791B4003C0E29 /* Info.plist */,
 				920D977C2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld */,
 			);
 			path = "NeoStore Training App";
+			sourceTree = "<group>";
+		};
+		920D978D2C479311003C0E29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				920D977F2C4791B4003C0E29 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		920D978E2C479313003C0E29 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				920D97812C4791B4003C0E29 /* LaunchScreen.storyboard */,
+				920D97792C4791B1003C0E29 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		920D978F2C479316003C0E29 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		920D97902C479319003C0E29 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		920D97912C47931C003C0E29 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		920D97922C479324003C0E29 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		920D97932C479328003C0E29 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				920D97732C4791B1003C0E29 /* AppDelegate.swift */,
+				920D97752C4791B1003C0E29 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +141,9 @@
 			dependencies = (
 			);
 			name = "NeoStore Training App";
+			packageProductDependencies = (
+				920D978B2C47920F003C0E29 /* Alamofire */,
+			);
 			productName = "NeoStore Training App";
 			productReference = 920D97702C4791B1003C0E29 /* NeoStore Training App.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 920D97672C4791B1003C0E29;
+			packageReferences = (
+				920D978A2C47920F003C0E29 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 920D97712C4791B1003C0E29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				920D977E2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld in Sources */,
-				920D97782C4791B1003C0E29 /* ViewController.swift in Sources */,
 				920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */,
 				920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,8 +349,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NeoStore Training App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,6 +366,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.neosoft.NeoStore-Training-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,8 +378,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NeoStore Training App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +395,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.neosoft.NeoStore-Training-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		920D978A2C47920F003C0E29 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		920D978B2C47920F003C0E29 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 920D978A2C47920F003C0E29 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		920D977C2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld */ = {
