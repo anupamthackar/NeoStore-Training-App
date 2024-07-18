@@ -14,6 +14,15 @@
 		920D97802C4791B4003C0E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920D977F2C4791B4003C0E29 /* Assets.xcassets */; };
 		920D97832C4791B4003C0E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920D97812C4791B4003C0E29 /* LaunchScreen.storyboard */; };
 		920D978C2C47920F003C0E29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 920D978B2C47920F003C0E29 /* Alamofire */; };
+		920D97952C47C5F2003C0E29 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97942C47C5F2003C0E29 /* APIManager.swift */; };
+		920D97A02C47CCAE003C0E29 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D979F2C47CCAE003C0E29 /* LoginModel.swift */; };
+		920D97A32C47CD2E003C0E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97A22C47CD2E003C0E29 /* LoginViewController.swift */; };
+		920D97A52C47CE9D003C0E29 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97A42C47CE9D003C0E29 /* LoginViewModel.swift */; };
+		920D97A72C47DD15003C0E29 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97A62C47DD15003C0E29 /* EndPointType.swift */; };
+		920D97AA2C47FCCD003C0E29 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 920D97A92C47FCCD003C0E29 /* Kingfisher */; };
+		920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97AC2C48E3A8003C0E29 /* RegisterModel.swift */; };
+		920D97AF2C48E3BF003C0E29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97AE2C48E3BF003C0E29 /* RegisterViewController.swift */; };
+		920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,14 @@
 		920D977F2C4791B4003C0E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		920D97822C4791B4003C0E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920D97842C4791B4003C0E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920D97942C47C5F2003C0E29 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		920D979F2C47CCAE003C0E29 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		920D97A22C47CD2E003C0E29 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		920D97A42C47CE9D003C0E29 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		920D97A62C47DD15003C0E29 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		920D97AC2C48E3A8003C0E29 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		920D97AE2C48E3BF003C0E29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920D97AA2C47FCCD003C0E29 /* Kingfisher in Frameworks */,
 				920D978C2C47920F003C0E29 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +79,7 @@
 				920D97932C479328003C0E29 /* Application */,
 				920D97922C479324003C0E29 /* Constant */,
 				920D97912C47931C003C0E29 /* Extension */,
+				920D97AB2C4801CA003C0E29 /* Utility */,
 				920D97902C479319003C0E29 /* Helper */,
 				920D978F2C479316003C0E29 /* Screens */,
 				920D978E2C479313003C0E29 /* Storyboard */,
@@ -91,6 +110,8 @@
 		920D978F2C479316003C0E29 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				920D97962C47C6CB003C0E29 /* Login */,
+				920D97972C47C6D3003C0E29 /* Register */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -98,6 +119,7 @@
 		920D97902C479319003C0E29 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				920D97942C47C5F2003C0E29 /* APIManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -125,6 +147,82 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		920D97962C47C6CB003C0E29 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				920D979A2C47C6E9003C0E29 /* Model */,
+				920D97992C47C6E6003C0E29 /* View */,
+				920D97982C47C6E3003C0E29 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		920D97972C47C6D3003C0E29 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				920D979E2C47C70D003C0E29 /* Model */,
+				920D979D2C47C70A003C0E29 /* View */,
+				920D979C2C47C707003C0E29 /* ViewModel */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		920D97982C47C6E3003C0E29 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				920D97A42C47CE9D003C0E29 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		920D97992C47C6E6003C0E29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920D97A22C47CD2E003C0E29 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		920D979A2C47C6E9003C0E29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				920D979F2C47CCAE003C0E29 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		920D979C2C47C707003C0E29 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		920D979D2C47C70A003C0E29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920D97AE2C48E3BF003C0E29 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		920D979E2C47C70D003C0E29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				920D97AC2C48E3A8003C0E29 /* RegisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		920D97AB2C4801CA003C0E29 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				920D97A62C47DD15003C0E29 /* EndPointType.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +241,7 @@
 			name = "NeoStore Training App";
 			packageProductDependencies = (
 				920D978B2C47920F003C0E29 /* Alamofire */,
+				920D97A92C47FCCD003C0E29 /* Kingfisher */,
 			);
 			productName = "NeoStore Training App";
 			productReference = 920D97702C4791B1003C0E29 /* NeoStore Training App.app */;
@@ -174,6 +273,7 @@
 			mainGroup = 920D97672C4791B1003C0E29;
 			packageReferences = (
 				920D978A2C47920F003C0E29 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				920D97A82C47FCCD003C0E29 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 920D97712C4791B1003C0E29 /* Products */;
 			projectDirPath = "";
@@ -202,9 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920D97A32C47CD2E003C0E29 /* LoginViewController.swift in Sources */,
+				920D97AF2C48E3BF003C0E29 /* RegisterViewController.swift in Sources */,
+				920D97A72C47DD15003C0E29 /* EndPointType.swift in Sources */,
+				920D97A02C47CCAE003C0E29 /* LoginModel.swift in Sources */,
+				920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */,
+				920D97952C47C5F2003C0E29 /* APIManager.swift in Sources */,
 				920D977E2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld in Sources */,
 				920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */,
 				920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */,
+				920D97A52C47CE9D003C0E29 /* LoginViewModel.swift in Sources */,
+				920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +542,14 @@
 				kind = branch;
 			};
 		};
+		920D97A82C47FCCD003C0E29 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +557,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 920D978A2C47920F003C0E29 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		920D97A92C47FCCD003C0E29 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 920D97A82C47FCCD003C0E29 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 
