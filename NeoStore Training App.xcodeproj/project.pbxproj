@@ -23,6 +23,8 @@
 		920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97AC2C48E3A8003C0E29 /* RegisterModel.swift */; };
 		920D97AF2C48E3BF003C0E29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97AE2C48E3BF003C0E29 /* RegisterViewController.swift */; };
 		920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */; };
+		926FD1E32C4922DB00FD3D53 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E22C4922DB00FD3D53 /* UserData.swift */; };
+		926FD1E62C49306B00FD3D53 /* ShowAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		920D97AC2C48E3A8003C0E29 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		920D97AE2C48E3BF003C0E29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		926FD1E22C4922DB00FD3D53 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		920D978F2C479316003C0E29 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				926FD1E12C49226B00FD3D53 /* Home */,
 				920D97962C47C6CB003C0E29 /* Login */,
 				920D97972C47C6D3003C0E29 /* Register */,
 			);
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				920D97942C47C5F2003C0E29 /* APIManager.swift */,
+				926FD1E42C49231100FD3D53 /* UserModel */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 		920D97912C47931C003C0E29 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -223,6 +230,21 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		926FD1E12C49226B00FD3D53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		926FD1E42C49231100FD3D53 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				926FD1E22C4922DB00FD3D53 /* UserData.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,9 +330,11 @@
 				920D97A02C47CCAE003C0E29 /* LoginModel.swift in Sources */,
 				920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */,
 				920D97952C47C5F2003C0E29 /* APIManager.swift in Sources */,
+				926FD1E32C4922DB00FD3D53 /* UserData.swift in Sources */,
 				920D977E2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld in Sources */,
 				920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */,
 				920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */,
+				926FD1E62C49306B00FD3D53 /* ShowAlertExtension.swift in Sources */,
 				920D97A52C47CE9D003C0E29 /* LoginViewModel.swift in Sources */,
 				920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */,
 			);

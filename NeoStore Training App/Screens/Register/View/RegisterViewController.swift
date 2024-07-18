@@ -45,27 +45,10 @@ class RegisterViewController: UIViewController {
                                                confirmPassword: confirmPassword,
                                                gender: "M",
                                                phoneNo: phoneNo)
+
         
-        apiManagere.request(endpoint: EndPointItems.register,
-                            modeltype: RegistrationResponse.self,
-                            parameters: registerData,
-                            headers: nil) { result in
-            switch result {
-            case .success(let response):
-                self.showAlert(message: response.message, completion: {self.NavigateToLogin()})
-            case .failure(let error):
-                self.showAlert(message: "Registration failed: \(error.localizedDescription)")
-            }
-        }
     }
-    func showAlert(message: String, completion: (() -> Void)? = nil){
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
-            completion?()
-        }
-    )
-        self.present(alert, animated: true,completion: nil)
-    }
+
     
     func NavigateToLogin(){
         

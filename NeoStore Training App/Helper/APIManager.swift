@@ -20,7 +20,9 @@ class APIManager {
                                           parameters: U?,
                                           headers: HTTPHeaders? = nil,
                                           completion: @escaping (Result<T, Error>) -> Void){
+        
         let encoder: ParameterEncoder = endpoint.method == .post ? URLEncodedFormParameterEncoder.default : JSONParameterEncoder.default
+        
         AF.request(endpoint.url!,
                    method: endpoint.method,
                    parameters: parameters,
@@ -38,6 +40,37 @@ class APIManager {
             }
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //
 //    //MARK: Generic POST Method
 //    func postCall<T: Codable, U: Codable>(url: String,
