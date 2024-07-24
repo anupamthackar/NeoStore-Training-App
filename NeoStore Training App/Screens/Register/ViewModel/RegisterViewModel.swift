@@ -6,18 +6,21 @@
 //
 
 import Foundation
-
-func registerUser () {
+class RegisterViewModel {
+    var registrationResponse: RegistrationResponse?
     
-    APIManager.request(endpoint: EndPointItems.register,
-                        modeltype: RegistrationResponse.self,
-                        parameters: registerData,
-                        headers: nil) { result in
-        switch result {
-        case .success(let response):
-            self.showAlert(message: response.message, completion: {self.NavigateToLogin()})
-        case .failure(let error):
-            self.showAlert(message: "Registration failed: \(error.localizedDescription)")
+    func registerUser (with details: RegistrationRequest, completion: @escaping (Result <RegistrationResponse, Error>) -> Void) {
+        
+        APIManager.shared.request(endpoint: EndPointItems.register,
+                                  modeltype: RegistrationResponse.self,
+                                  parameters: details,
+                                  headers: nil) { result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
 }

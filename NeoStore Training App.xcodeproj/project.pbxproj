@@ -25,6 +25,14 @@
 		920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */; };
 		926FD1E32C4922DB00FD3D53 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E22C4922DB00FD3D53 /* UserData.swift */; };
 		926FD1E62C49306B00FD3D53 /* ShowAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */; };
+		929421F52C4FAEDC007C1F22 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929421F42C4FAEDC007C1F22 /* TextFieldExtension.swift */; };
+		929421FB2C50CBCA007C1F22 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929421FA2C50CBCA007C1F22 /* HomeModel.swift */; };
+		929421FF2C50CC12007C1F22 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929421FE2C50CC12007C1F22 /* HomeViewModel.swift */; };
+		929422012C50CF26007C1F22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929422002C50CF26007C1F22 /* HomeViewController.swift */; };
+		929422032C50E4E3007C1F22 /* Gotham-Font in Resources */ = {isa = PBXBuildFile; fileRef = 929422022C50E4E3007C1F22 /* Gotham-Font */; };
+		929422092C50E8CC007C1F22 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929422082C50E8CC007C1F22 /* ForgetPasswordModel.swift */; };
+		9294220B2C50E9CE007C1F22 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294220A2C50E9CE007C1F22 /* ForgetPasswordViewController.swift */; };
+		9294220D2C50EA01007C1F22 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294220C2C50EA01007C1F22 /* ForgetPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		920D97B02C48E3D8003C0E29 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		926FD1E22C4922DB00FD3D53 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertExtension.swift; sourceTree = "<group>"; };
+		929421F42C4FAEDC007C1F22 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		929421FA2C50CBCA007C1F22 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		929421FE2C50CC12007C1F22 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		929422002C50CF26007C1F22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		929422022C50E4E3007C1F22 /* Gotham-Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Gotham-Font"; sourceTree = "<group>"; };
+		929422082C50E8CC007C1F22 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
+		9294220A2C50E9CE007C1F22 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		9294220C2C50EA01007C1F22 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,7 @@
 		920D978D2C479311003C0E29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				929422022C50E4E3007C1F22 /* Gotham-Font */,
 				920D977F2C4791B4003C0E29 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -114,6 +131,7 @@
 		920D978F2C479316003C0E29 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				929422042C50E837007C1F22 /* Forget Password */,
 				926FD1E12C49226B00FD3D53 /* Home */,
 				920D97962C47C6CB003C0E29 /* Login */,
 				920D97972C47C6D3003C0E29 /* Register */,
@@ -134,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				926FD1E52C49306B00FD3D53 /* ShowAlertExtension.swift */,
+				929421F42C4FAEDC007C1F22 /* TextFieldExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -233,6 +252,9 @@
 		926FD1E12C49226B00FD3D53 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				929421F92C50CBAE007C1F22 /* Model */,
+				929421F82C50CBAB007C1F22 /* View */,
+				929421F62C50CBA2007C1F22 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -243,6 +265,64 @@
 				926FD1E22C4922DB00FD3D53 /* UserData.swift */,
 			);
 			path = UserModel;
+			sourceTree = "<group>";
+		};
+		929421F62C50CBA2007C1F22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				929421FE2C50CC12007C1F22 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		929421F82C50CBAB007C1F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929422002C50CF26007C1F22 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		929421F92C50CBAE007C1F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929421FA2C50CBCA007C1F22 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		929422042C50E837007C1F22 /* Forget Password */ = {
+			isa = PBXGroup;
+			children = (
+				929422072C50E851007C1F22 /* Model */,
+				929422062C50E84E007C1F22 /* View */,
+				929422052C50E84B007C1F22 /* ViewModel */,
+			);
+			path = "Forget Password";
+			sourceTree = "<group>";
+		};
+		929422052C50E84B007C1F22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9294220C2C50EA01007C1F22 /* ForgetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		929422062C50E84E007C1F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9294220A2C50E9CE007C1F22 /* ForgetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		929422072C50E851007C1F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929422082C50E8CC007C1F22 /* ForgetPasswordModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +394,7 @@
 				920D97832C4791B4003C0E29 /* LaunchScreen.storyboard in Resources */,
 				920D97802C4791B4003C0E29 /* Assets.xcassets in Resources */,
 				920D977B2C4791B1003C0E29 /* Main.storyboard in Resources */,
+				929422032C50E4E3007C1F22 /* Gotham-Font in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,19 +405,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929421FF2C50CC12007C1F22 /* HomeViewModel.swift in Sources */,
+				9294220B2C50E9CE007C1F22 /* ForgetPasswordViewController.swift in Sources */,
 				920D97A32C47CD2E003C0E29 /* LoginViewController.swift in Sources */,
 				920D97AF2C48E3BF003C0E29 /* RegisterViewController.swift in Sources */,
+				929422012C50CF26007C1F22 /* HomeViewController.swift in Sources */,
 				920D97A72C47DD15003C0E29 /* EndPointType.swift in Sources */,
 				920D97A02C47CCAE003C0E29 /* LoginModel.swift in Sources */,
+				929421F52C4FAEDC007C1F22 /* TextFieldExtension.swift in Sources */,
 				920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */,
 				920D97952C47C5F2003C0E29 /* APIManager.swift in Sources */,
 				926FD1E32C4922DB00FD3D53 /* UserData.swift in Sources */,
+				929421FB2C50CBCA007C1F22 /* HomeModel.swift in Sources */,
 				920D977E2C4791B1003C0E29 /* NeoStore_Training_App.xcdatamodeld in Sources */,
 				920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */,
+				9294220D2C50EA01007C1F22 /* ForgetPasswordViewModel.swift in Sources */,
 				920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */,
 				926FD1E62C49306B00FD3D53 /* ShowAlertExtension.swift in Sources */,
 				920D97A52C47CE9D003C0E29 /* LoginViewModel.swift in Sources */,
 				920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */,
+				929422092C50E8CC007C1F22 /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

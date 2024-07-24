@@ -30,6 +30,11 @@ class APIManager {
                    headers:  headers)
         .validate(statusCode: 200...299)
         .responseDecodable(of: T.self) { response in
+            print("Request: \(String(describing: response.request))")
+            print("Response: \(String(describing: response.response))")
+            print("Data: \(String(describing: response.data))")
+            print("Result: \(response.result)")
+            
             switch response.result {
             case .success(let data):
                 print(data)
