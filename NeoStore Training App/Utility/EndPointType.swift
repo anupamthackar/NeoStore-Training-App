@@ -24,6 +24,7 @@ protocol EndPointType {
 enum EndPointItems {
     case register
     case login
+    case forgetPassword
 }
 
 extension EndPointItems:  EndPointType {
@@ -34,12 +35,14 @@ extension EndPointItems:  EndPointType {
             return "users/login"
         case .register:
             return "users/register"
+        case .forgetPassword:
+            return "users/forgot"
         }
     }
     //Method
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .register, .login:
+        case .register, .login, .forgetPassword:
             return .post
         }
     }

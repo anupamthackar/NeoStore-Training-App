@@ -10,20 +10,23 @@ import Foundation
 
 class LoginViewController: UIViewController {
     //Outlets:
+    
     @IBOutlet weak var PasswordTextFeild: UITextField!
     @IBOutlet weak var UsernameTextFeild: UITextField!
     @IBOutlet weak var forgetPasswordBtn: UIButton!
     @IBOutlet weak var PlusNavigateRegisterBtn: UIButton!
+    
     var loginViewModel = LoginViewModel()
-    
-    
+    var errorMessage: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ImageSet()
-        UsernameTextFeild.text = "anupamthackar0786@gmail.com"
-        PasswordTextFeild.text = "Manojji@1"
+        UsernameTextFeild.text = "anupamthackar@gmail.com"
+        PasswordTextFeild.text = "Manojji@11"
         
     }
+
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationItem.hidesBackButton = true
     }
@@ -46,7 +49,7 @@ class LoginViewController: UIViewController {
         }
         
         let loginRequest = LoginRequest(email: username, password: password)
-//        let loginRequest = LoginRequest(email: "anupamthackar0786@gmail.com", password: "Manojji@1")
+        loginViewModel.loginUser(with: loginRequest, completion: {_ in })
         
         loginViewModel.loginUser(with: loginRequest){ [weak self] result in
             switch result {
@@ -65,23 +68,22 @@ class LoginViewController: UIViewController {
         PasswordTextFeild.setIcon(_ImageLiteralType(imageLiteralResourceName: "password_icon"), placeholderName: "Password")
         
     }
+    
     func navigateToHome() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
         self.navigationController?.pushViewController(HomeVC!, animated: true)
     }
+    
     func navigateToForgetPassword(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let forgetPasswordVC = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordViewController") as? ForgetPasswordViewController
         self.navigationController?.pushViewController(forgetPasswordVC!, animated: true)
     }
+    
     func navigateToRegister(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let RegisterVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
         self.navigationController?.pushViewController(RegisterVC!, animated: true)
     }
-    
-
-
-    
 }

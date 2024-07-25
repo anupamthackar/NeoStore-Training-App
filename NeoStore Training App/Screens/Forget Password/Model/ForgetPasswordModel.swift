@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ForgetPasswordRequest {
+struct ForgetPasswordRequest: Codable {
     let email: String
 }
 
-struct ForgetPasswordResponse {
+struct ForgetPasswordResponse: Codable {
     let status: Int
     let message: String
     let userMassage: String

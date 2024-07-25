@@ -22,7 +22,7 @@ class APIManager {
                                           completion: @escaping (Result<T, Error>) -> Void){
         
         let encoder: ParameterEncoder = endpoint.method == .post ? URLEncodedFormParameterEncoder.default : JSONParameterEncoder.default
-        
+//        let headers: HTTPHeaders = ["access_token": UserDefaults.standard.string(forKey: "accessToken") ?? ""]
         AF.request(endpoint.url!,
                    method: endpoint.method,
                    parameters: parameters,

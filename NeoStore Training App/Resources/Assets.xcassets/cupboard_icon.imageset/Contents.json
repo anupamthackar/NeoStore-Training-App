@@ -1,11 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "appstore.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
       "filename" : "cupboard_icon.png",
       "idiom" : "universal",
       "scale" : "1x"

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 
-class LoginViewModel {
+class LoginViewModel: NSObject {
     
     var loginResponse: LogInResponse?
     
@@ -22,6 +22,7 @@ class LoginViewModel {
             switch result {
             case .success(let response):
                 completion(.success(response))
+                UserDefaults.standard.set(response.data?.accessToken, forKey: "accessToken")
             case .failure(let error):
                 completion(.failure(error))
             }

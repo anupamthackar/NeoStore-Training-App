@@ -33,6 +33,7 @@
 		929422092C50E8CC007C1F22 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929422082C50E8CC007C1F22 /* ForgetPasswordModel.swift */; };
 		9294220B2C50E9CE007C1F22 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294220A2C50E9CE007C1F22 /* ForgetPasswordViewController.swift */; };
 		9294220D2C50EA01007C1F22 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294220C2C50EA01007C1F22 /* ForgetPasswordViewModel.swift */; };
+		92AC938C2C521D2E0075C36D /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC938B2C521D2E0075C36D /* DataBinding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		929422082C50E8CC007C1F22 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
 		9294220A2C50E9CE007C1F22 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		9294220C2C50EA01007C1F22 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
+		92AC938B2C521D2E0075C36D /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		920D97902C479319003C0E29 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				92AC938A2C521D180075C36D /* Data Binding */,
 				920D97942C47C5F2003C0E29 /* APIManager.swift */,
 				926FD1E42C49231100FD3D53 /* UserModel */,
 			);
@@ -325,6 +328,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		92AC938A2C521D180075C36D /* Data Binding */ = {
+			isa = PBXGroup;
+			children = (
+				92AC938B2C521D2E0075C36D /* DataBinding.swift */,
+			);
+			path = "Data Binding";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,6 +432,7 @@
 				920D97742C4791B1003C0E29 /* AppDelegate.swift in Sources */,
 				9294220D2C50EA01007C1F22 /* ForgetPasswordViewModel.swift in Sources */,
 				920D97762C4791B1003C0E29 /* SceneDelegate.swift in Sources */,
+				92AC938C2C521D2E0075C36D /* DataBinding.swift in Sources */,
 				926FD1E62C49306B00FD3D53 /* ShowAlertExtension.swift in Sources */,
 				920D97A52C47CE9D003C0E29 /* LoginViewModel.swift in Sources */,
 				920D97AD2C48E3A8003C0E29 /* RegisterModel.swift in Sources */,

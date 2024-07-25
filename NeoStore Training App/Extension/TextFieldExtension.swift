@@ -19,6 +19,8 @@ extension UITextField {
         self.tintColor = UIColor.white
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 5
+        self.clipsToBounds = true
         
         //MARK: Changing Placeholder Name and style
         let placeHolder = NSAttributedString(string: placeholderName, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
