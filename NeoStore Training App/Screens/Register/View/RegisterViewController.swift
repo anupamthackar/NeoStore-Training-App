@@ -109,6 +109,14 @@ class RegisterViewController: UIViewController {
         passwordTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: "cpassword_icon"), placeholderName: "Password")
         confirmpasswordTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: "password_icon"), placeholderName: "Confirm Password")
         phonenumberTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: "cellphone_icon"), placeholderName: "Phone Number")
+        
+        //MARK: Done Keyboard
+        firstnameTextField.addDoneButtonOnKeyboard()
+        lastnameTextField.addDoneButtonOnKeyboard()
+        emailTextField.addDoneButtonOnKeyboard()
+        passwordTextField.addDoneButtonOnKeyboard()
+        confirmpasswordTextField.addDoneButtonOnKeyboard()
+        phonenumberTextField.addDoneButtonOnKeyboard()
     }
     
     func NavigateToLogin(){

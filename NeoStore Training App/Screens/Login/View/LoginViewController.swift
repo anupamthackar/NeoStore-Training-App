@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ImageSet()
+        KeyboardDoneLogin()
         UsernameTextFeild.text = "anupamthackar@gmail.com"
         PasswordTextFeild.text = "Manojji@11"
         
@@ -66,7 +67,11 @@ class LoginViewController: UIViewController {
     func ImageSet() {
         UsernameTextFeild.setIcon(_ImageLiteralType(imageLiteralResourceName: "username_icon"), placeholderName: "User Name")
         PasswordTextFeild.setIcon(_ImageLiteralType(imageLiteralResourceName: "password_icon"), placeholderName: "Password")
-        
+    }
+    
+    func KeyboardDoneLogin(){
+        UsernameTextFeild.addDoneButtonOnKeyboard()
+        PasswordTextFeild.addDoneButtonOnKeyboard()
     }
     
     func navigateToHome() {

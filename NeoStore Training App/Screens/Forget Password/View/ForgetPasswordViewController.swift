@@ -42,6 +42,7 @@ class ForgetPasswordViewController: UIViewController {
     
     func SetImage(){
         emailTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: "email_icon"), placeholderName: "Email")
+        emailTextField.addDoneButtonOnKeyboard()
     }
     
     func navigateToLogin(){
