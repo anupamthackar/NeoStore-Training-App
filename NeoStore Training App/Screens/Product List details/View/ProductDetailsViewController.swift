@@ -1,13 +1,13 @@
 //
-//  SideMenuViewController.swift
+//  ProductDetailsViewController.swift
 //  NeoStore Training App
 //
-//  Created by Neosoft on 29/07/24.
+//  Created by Neosoft on 01/08/24.
 //
 
 import UIKit
 
-class SideMenuViewController: UIViewController {
+class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
