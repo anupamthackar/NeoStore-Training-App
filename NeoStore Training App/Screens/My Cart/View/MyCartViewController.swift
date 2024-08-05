@@ -1,13 +1,13 @@
 //
-//  EnterQuantityViewController.swift
+//  MyCartViewController.swift
 //  NeoStore Training App
 //
-//  Created by Neosoft on 02/08/24.
+//  Created by Neosoft on 05/08/24.
 //
 
 import UIKit
 
-class EnterQuantityViewController: UIViewController {
+class MyCartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
