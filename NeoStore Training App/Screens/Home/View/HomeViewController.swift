@@ -1,68 +1,117 @@
-//
-//  HomeViewController.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 24/07/24.
-//
-
-import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
-    //Images Outlet
-    @IBOutlet weak var cupboardImage: UIImageView!
-    @IBOutlet weak var chairImage: UIImageView!
-    @IBOutlet weak var sofaImage: UIImageView!
-    @IBOutlet weak var tableImage: UIImageView!
     
-    //Collection View Outlet
+    @IBOutlet weak var HamburgerView: UIView!
+    @IBOutlet weak var leadingConstraintsForHamburger: NSLayoutConstraint!
     @IBOutlet weak var ImageSliderCollectionView: UICollectionView!
-
-    var ProductImages = ["slider_img1","slider_img2","slider_img3","slider_img4"]
+    @IBOutlet weak var pageControler: UIPageControl!
     
-    var time: Timer?
-    var currentcellIndex = 0
+    let ProductImages = Arrays.ProductImages
+    var currentCellIndex = 0
+    
+    //    let sideMenuVC = SideMenuViewController()
     
     override func viewDidLoad() {
-        //Define delegate and datasourse
-        ImageSliderCollectionView.delegate = self
-        ImageSliderCollectionView.dataSource = self
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: .menuIcon, style: .plain, target: self , action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .searchIcon, style: .plain, target: self, action: nil)
-        navigationItem.title = "NeoStore"
-        navigationItem.titleView?.backgroundColor = .red
-        
-        time = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideTonext), userInfo: nil, repeats: true)
+        super.viewDidLoad()
+        print(UserDefaults.standard.string(forKey: UserDefaultKey.accessToken) ?? Texts.EmptyString)
+        setupUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.backButtonTitle = Texts.EmptyString
     }
     
-    @objc func slideTonext(){
-        if currentcellIndex < ProductImages.count - 1 {
-            currentcellIndex += 1
-        }
-        else {
-            currentcellIndex = 0
-        }
+    override func viewWillDisappear(_ animated: Bool) {
+        hideHamburgerMenuView()
+    }
+    
+    private func setupUI() {
+        HamburgerView.isHidden = true
         
-        ImageSliderCollectionView.scrollToItem(at: IndexPath(item: currentcellIndex, section: 1) ,at: .right, animated: true)
+        ImageSliderCollectionView.delegate = self
+        ImageSliderCollectionView.dataSource = self
+        ImageSliderCollectionView.register(UINib(nibName: NibName.ImageSliderCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifier.ImageSliderCell)
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: .menuIcon, style: .plain, target: self, action: #selector(hamburgerMenuAction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .searchIcon, style: .plain, target: self, action: nil)
+        navigationItem.title = Title.NeoStore
+        
+        pageControler.numberOfPages = ProductImages.count
+        
+        //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnHamburgerBackView(_:)))
+        //        view.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    @objc func hamburgerMenuAction() {
+        if leadingConstraintsForHamburger.constant == -280 {
+            HamburgerView.isHidden = false
+            leadingConstraintsForHamburger.constant = 0
+            UIView.animate(withDuration: 0.7) {
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            hideHamburgerMenuView()
+        }
+    }
+    
+    @IBAction func tapOnHamburgerBackView(_ sender: Any) {
+        hideHamburgerMenuView()
+    }
+    
+    private func hideHamburgerMenuView() {
+        HamburgerView.isHidden = true
+        leadingConstraintsForHamburger.constant = -280
+        UIView.animate(withDuration: 1) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
+    @IBAction func TableNavAction(_ sender: Any) {
+        navigateToProductList(with: 1)
+    }
+    
+    @IBAction func ChairNavAction(_ sender: Any) {
+        navigateToProductList(with: 2)
+    }
+    
+    @IBAction func CupboardNavAction(_ sender: Any) {
+        navigateToProductList(with: 3)
+    }
+    
+    @IBAction func SofasNavAction(_ sender: Any) {
+        navigateToProductList(with: 4)
+    }
+    
+    private func navigateToProductList(with categoryId: Int) {
+        if let productListVC = storyboard?.instantiateViewController(withIdentifier: Identifier.ProductListViewController) as? ProductListViewController {
+            productListVC.categoryId = categoryId
+            navigationController?.pushViewController(productListVC, animated: true)
+        }
     }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: ImageSliderCollectionView.frame.width, height: ImageSliderCollectionView.frame.height)
-    }
-}
-
-extension HomeViewController: UICollectionViewDataSource{
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ProductImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = ImageSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "ImageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
-        cell.MyImageSlider.image = UIImage(named: ProductImages[indexPath.row])
+        let cell = ImageSliderCollectionView.dequeueReusableCell(withReuseIdentifier: Identifier.ImageSliderCell, for: indexPath) as! ImageSliderCollectionViewCell
+        cell.SliderImage.image = UIImage(named: ProductImages[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: ImageSliderCollectionView.frame.width, height: ImageSliderCollectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.width
+        currentCellIndex = Int(scrollView.contentOffset.x / pageWidth)
+        pageControler.currentPage = currentCellIndex
+//        print("Current page: \(currentCellIndex)")
     }
 }

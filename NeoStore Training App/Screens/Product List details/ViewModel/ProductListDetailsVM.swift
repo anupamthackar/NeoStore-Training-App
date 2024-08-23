@@ -15,18 +15,18 @@ class ProductListDetailsVM {
         request: ProductListDetailsRequest,
         
         completion: @escaping((String?) -> Void)) {
-    
-    APIManager.shared.request(
-        endpoint: EndPointItems.getProductDetails,
-        modeltype: ProductListDetailsResponse.self,
-        parameters: request) { response in
-            switch response {
-            case .success(let response):
-                self.productsDetails = response
-                completion(nil)
-            case .failure(let error):
-                completion(error.localizedDescription)
-            }
+            
+            APIManager.shared.request(
+                endpoint: EndPointItems.getProductDetails,
+                modeltype: ProductListDetailsResponse.self,
+                parameters: request) { response in
+                    switch response {
+                    case .success(let response):
+                        self.productsDetails = response
+                        completion(nil)
+                    case .failure(let error):
+                        completion(error.localizedDescription)
+                    }
+                }
         }
-    }
 }

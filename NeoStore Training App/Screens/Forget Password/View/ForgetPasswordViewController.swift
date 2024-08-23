@@ -1,10 +1,3 @@
-//
-//  ForgetPasswordViewController.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 24/07/24.
-//
-
 import UIKit
 import Foundation
 
@@ -34,20 +27,19 @@ class ForgetPasswordViewController: UIViewController {
             print("Loading...")
         case .success(let result):
             print("Forget passwor: \(result.userMassage)")
-        
+            
         case .failure(let error):
             print("Error: \(error.localizedDescription)")
         }
     }
     
     func SetImage(){
-        emailTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: "email_icon"), placeholderName: "Email")
+        emailTextField.setIcon(_ImageLiteralType(imageLiteralResourceName: Images.emailIcon), placeholderName: PlaceholderText.Email)
         emailTextField.addDoneButtonOnKeyboard()
     }
     
     func navigateToLogin(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: Identifier.LoginViewController) as? LoginViewController
         navigationController?.pushViewController(loginVC!, animated: true)
     }
 }

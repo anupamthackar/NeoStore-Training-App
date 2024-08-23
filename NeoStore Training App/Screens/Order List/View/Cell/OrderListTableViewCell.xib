@@ -1,21 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="OrderListTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="OrderListTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderListTableViewCell" rowHeight="93" id="KGk-i7-Jjw" customClass="OrderListTableViewCell" customModule="NeoStore_Training_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Order ID: 3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wO-eS-POu">
+                        <rect key="frame" x="10" y="20" width="115" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bz-B3-0Bj">
+                        <rect key="frame" x="10" y="46" width="150" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Lxf-OC-Ihp"/>
+                            <constraint firstAttribute="width" constant="150" id="aLL-pb-5CZ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Data: 08 Aug 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-n8-bC4">
+                        <rect key="frame" x="10" y="57" width="128" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$768921232.32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeJ-Xh-mJp">
+                        <rect key="frame" x="158" y="36" width="142" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4wO-eS-POu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="3HE-as-XTk"/>
+                    <constraint firstAttribute="bottom" secondItem="JeJ-Xh-mJp" secondAttribute="bottom" constant="36" id="7WP-8h-Udc"/>
+                    <constraint firstItem="I7P-n8-bC4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Cv8-xa-P1s"/>
+                    <constraint firstItem="I7P-n8-bC4" firstAttribute="top" secondItem="7Bz-B3-0Bj" secondAttribute="bottom" constant="10" id="DRf-xr-m0H"/>
+                    <constraint firstItem="JeJ-Xh-mJp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="Dtj-uY-I6E"/>
+                    <constraint firstItem="4wO-eS-POu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="RU2-vt-8cD"/>
+                    <constraint firstItem="7Bz-B3-0Bj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VS1-Pd-uz7"/>
+                    <constraint firstAttribute="trailing" secondItem="JeJ-Xh-mJp" secondAttribute="trailing" constant="20" id="lFY-mU-apc"/>
+                    <constraint firstItem="JeJ-Xh-mJp" firstAttribute="centerY" secondItem="7Bz-B3-0Bj" secondAttribute="centerY" id="nwO-iK-rTb"/>
+                    <constraint firstAttribute="bottom" secondItem="I7P-n8-bC4" secondAttribute="bottom" constant="20" id="orF-bd-Cbz"/>
+                    <constraint firstItem="7Bz-B3-0Bj" firstAttribute="top" secondItem="4wO-eS-POu" secondAttribute="bottom" constant="10" id="t0o-3G-KDz"/>
+                    <constraint firstItem="JeJ-Xh-mJp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tjP-m8-lOi"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="orderCostLabel" destination="JeJ-Xh-mJp" id="WAL-cY-sui"/>
+                <outlet property="orderDateLabel" destination="I7P-n8-bC4" id="dXe-bc-qON"/>
+                <outlet property="orderIdLabel" destination="4wO-eS-POu" id="7lU-JB-SPA"/>
+            </connections>
+            <point key="canvasLocation" x="103.81679389312977" y="36.971830985915496"/>
         </tableViewCell>
     </objects>
 </document>

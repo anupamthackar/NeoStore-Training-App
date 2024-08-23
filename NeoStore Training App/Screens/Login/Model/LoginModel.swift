@@ -1,10 +1,3 @@
-//
-//  LoginModel.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 17/07/24.
-//
-
 import Foundation
 
 struct LoginRequest: Codable {
@@ -18,7 +11,7 @@ struct LogInResponse: Codable {
     let data: UserData?
     let message: String
     let userMessage: String
-
+    
     enum CodingKeys: String, CodingKey {
         case status
         case data

@@ -1,14 +1,12 @@
-//
-//  OrderDetailTableViewCell.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 07/08/24.
-//
-
 import UIKit
 
 class OrderDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var orderProductName: UILabel!
+    @IBOutlet weak var orderProductCost: UILabel!
+    @IBOutlet weak var orderProductQuantity: UILabel!
+    @IBOutlet weak var orderProductCategory: UILabel!
+    @IBOutlet weak var orderProductImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +17,4 @@ class OrderDetailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

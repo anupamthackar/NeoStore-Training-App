@@ -1,12 +1,4 @@
-//
-//  RegisterModel.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 18/07/24.
-//
-
 import Foundation
-
 
 struct RegistrationRequest: Codable {
     let firstName: String
@@ -16,7 +8,7 @@ struct RegistrationRequest: Codable {
     let confirmPassword: String
     let gender: String
     let phoneNo: String
-
+    
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
@@ -33,7 +25,7 @@ struct RegistrationResponse: Codable {
     let data: UserData?
     let message: String
     let userMessage: String
-
+    
     enum CodingKeys: String, CodingKey {
         case status
         case data

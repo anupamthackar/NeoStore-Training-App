@@ -1,10 +1,3 @@
-//
-//  LoginViewModel.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 17/07/24.
-//
-
 import Foundation
 import Alamofire
 
@@ -22,11 +15,17 @@ class LoginViewModel: NSObject {
             switch result {
             case .success(let response):
                 completion(.success(response))
-                UserDefaults.standard.set(response.data?.accessToken, forKey: "accessToken")
+                if let accesstoken = response.data?.accessToken{
+                    UserDefaults.standard.set(accesstoken, forKey: UserDefaultKey.accessToken)
+                    UserDefaults.standard.set(response.data?.firstName, forKey: UserDefaultKey.firstName)
+                    UserDefaults.standard.set(response.data?.lastName, forKey: UserDefaultKey.lastName)
+                    UserDefaults.standard.set(response.data?.email, forKey: UserDefaultKey.email)
+                    print(accesstoken)
+                }
+        
             case .failure(let error):
                 completion(.failure(error))
             }
-            
         }
     }
 }

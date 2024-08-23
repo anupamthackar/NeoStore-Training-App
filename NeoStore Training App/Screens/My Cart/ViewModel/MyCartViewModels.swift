@@ -1,10 +1,3 @@
-//
-//  MyCartViewModel.swift
-//  NeoStore Training App
-//
-//  Created by Neosoft on 05/08/24.
-//
-
 import Foundation
 class ListCartViewModel {
     
@@ -14,8 +7,7 @@ class ListCartViewModel {
     func fetchCartItems(completion: @escaping ((Result<CartListResponse, Error>) -> Void)) {
         APIManager.shared.request(
             endpoint: EndPointItems.getCart,
-            modeltype: CartListResponse.self,
-            parameters: EmptyModel()) { response in
+            modeltype: CartListResponse.self, parameters: EmptyModel()) { response in
                 switch response {
                 case .success(let response):
                     self.cartList = response

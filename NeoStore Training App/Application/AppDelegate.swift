@@ -11,13 +11,71 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+   
+    
+    // Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "YourDataModelName")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
 
-
+    // MARK: - Core Data Saving support
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        saveContext()
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        checkForAccessToken()
+        //MARK: NavigationBarItem appearence custom 
+        let appearance = UINavigationBar.appearance()
+        appearance.barTintColor = UIColor.red // Background color
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white] // Title color
+        appearance.tintColor = UIColor.white
         return true
     }
+    
+    private func checkForAccessToken() {
+            if let _ = UserDefaults.standard.string(forKey: "accessToken") {
+                navigateToHome()
+            } else {
+                navigateToLogin()
+            }
+        }
 
+        private func navigateToHome() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            window?.rootViewController = UINavigationController(rootViewController: homeVC)
+            window?.makeKeyAndVisible()
+        }
+
+        private func navigateToLogin() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            window?.rootViewController = UINavigationController(rootViewController: loginVC)
+            window?.makeKeyAndVisible()
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -34,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentContainer = {
+var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -77,5 +135,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-}
+
 

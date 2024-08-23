@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+//Need to learn
+extension Notification.Name {
+    static let cartUpdated = Notification.Name("cartUpdated")
+}
