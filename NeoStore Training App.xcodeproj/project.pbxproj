@@ -41,6 +41,7 @@
 		9243EC8C2C53C3F8005141C7 /* ImageSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9243EC8A2C53C3F8005141C7 /* ImageSliderCollectionViewCell.xib */; };
 		926FD1E32C4922DB00FD3D53 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E22C4922DB00FD3D53 /* UserData.swift */; };
 		926FD1E62C49306B00FD3D53 /* ShowAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926FD1E52C49306B00FD3D53 /* ShowAlert+Extension.swift */; };
+		92937FDE2C7DEF5D008BB49D /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92937FDD2C7DEF5D008BB49D /* UserSession.swift */; };
 		929421F52C4FAEDC007C1F22 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929421F42C4FAEDC007C1F22 /* TextField+Extension.swift */; };
 		929422012C50CF26007C1F22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929422002C50CF26007C1F22 /* HomeViewController.swift */; };
 		929422032C50E4E3007C1F22 /* Gotham-Font in Resources */ = {isa = PBXBuildFile; fileRef = 929422022C50E4E3007C1F22 /* Gotham-Font */; };
@@ -127,6 +128,7 @@
 		9243EC8A2C53C3F8005141C7 /* ImageSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		926FD1E22C4922DB00FD3D53 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		926FD1E52C49306B00FD3D53 /* ShowAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowAlert+Extension.swift"; sourceTree = "<group>"; };
+		92937FDD2C7DEF5D008BB49D /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		929421F42C4FAEDC007C1F22 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		929422002C50CF26007C1F22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		929422022C50E4E3007C1F22 /* Gotham-Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Gotham-Font"; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 		926FD1E12C49226B00FD3D53 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				92937FDC2C7DEF47008BB49D /* UserSession */,
 				929421F82C50CBAB007C1F22 /* View */,
 			);
 			path = Home;
@@ -577,6 +580,14 @@
 				926FD1E22C4922DB00FD3D53 /* UserData.swift */,
 			);
 			path = UserModel;
+			sourceTree = "<group>";
+		};
+		92937FDC2C7DEF47008BB49D /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				92937FDD2C7DEF5D008BB49D /* UserSession.swift */,
+			);
+			path = UserSession;
 			sourceTree = "<group>";
 		};
 		929421F82C50CBAB007C1F22 /* View */ = {
@@ -1087,6 +1098,7 @@
 				922F7DE82C64C1C6003962EA /* ResetPasswordViewModel.swift in Sources */,
 				929421F52C4FAEDC007C1F22 /* TextField+Extension.swift in Sources */,
 				92A794432C6353990002DA0A /* OrderListViewModel.swift in Sources */,
+				92937FDE2C7DEF5D008BB49D /* UserSession.swift in Sources */,
 				92A794222C60ADD60002DA0A /* addToCartModel.swift in Sources */,
 				920D97B12C48E3D8003C0E29 /* RegisterViewModel.swift in Sources */,
 				920D97952C47C5F2003C0E29 /* APIManager.swift in Sources */,
@@ -1288,6 +1300,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1323,6 +1336,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
